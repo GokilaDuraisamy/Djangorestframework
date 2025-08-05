@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{%load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<head>
+
+    <title>Forms</title>
+</head>
+
+<body>
+    <!-- home.html -->
+    <form method="POST" action="{%url 'students:index' %}">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
